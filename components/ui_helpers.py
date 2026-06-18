@@ -112,6 +112,19 @@ def render_lesson(lesson: dict):
     )
     st.write(lesson["objective"])
 
+    st.header("Lesson Brief")
+    why_col, summary_col = st.columns(2)
+    with why_col:
+        st.subheader("Why this matters")
+        st.write(lesson["why_it_matters"])
+    with summary_col:
+        st.subheader("Notebook summary")
+        st.write(lesson["notebook_summary"])
+
+    with st.expander("Key topics from the notebook", expanded=True):
+        for topic in lesson["key_topics"]:
+            st.markdown(f"- {topic}")
+
     overview_col, notebook_col = st.columns([2, 1])
     with overview_col:
         with st.expander("Concept", expanded=True):

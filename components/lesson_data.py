@@ -14,14 +14,36 @@ LESSONS = [
         "source_notebook": "lesson_1_introduction.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1ufloJqo7hWJNmh7fBPOSlSnB-0v2a9OK",
         "objective": "Store information in variables, print it, and inspect basic Python types.",
+        "why_it_matters": (
+            "Everything else in Python builds on this lesson. Variables let you name values, "
+            "printing lets you see what your program is doing, and types explain why Python "
+            "treats text, numbers, and true-or-false values differently."
+        ),
+        "notebook_summary": (
+            "The notebook starts with variables and a hello-world style print workflow, then "
+            "moves into Python's native data types, `type()` and `isinstance()`, variable naming "
+            "rules, naming conventions, and a first look at common beginner errors."
+        ),
+        "key_topics": [
+            "Variables and assignment",
+            "Printing values",
+            "Strings, integers, floats, and booleans",
+            "`type()` and `isinstance()`",
+            "Readable variable names",
+            "Common syntax and runtime errors",
+        ],
         "concept": (
             "A Python program starts with values. You give values names with variables, "
             "then use those names later in calculations, messages, conditions, and functions. "
-            "Python figures out the type from the value you assign."
+            "Python figures out the type from the value you assign, which is why the same "
+            "assignment pattern can hold text, numbers, decimals, or true-or-false values. "
+            "Once a value has a good name, the rest of your code becomes easier to read."
         ),
         "mental_model": (
             "Think of a variable as a labeled box. The label is the variable name, and "
-            "the thing inside the box is the current value."
+            "the thing inside the box is the current value. When you assign a new value to "
+            "the same name, you are replacing what is in the box, not creating a permanent "
+            "fact about the program."
         ),
         "example_title": "A tiny student profile",
         "example_code": """name = "Alice"
@@ -86,14 +108,36 @@ print("Student:", is_student)""",
         "source_notebook": "lessson-2-operators.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1TyDIX44rqhlMRrSmlDrz8-fWQnh3iq-1",
         "objective": "Use operators to calculate values, compare results, and combine conditions.",
+        "why_it_matters": (
+            "Operators are how programs turn stored values into useful answers. They let you "
+            "calculate totals, compare outcomes, update counters, and build the conditions that "
+            "later drive `if` statements and loops."
+        ),
+        "notebook_summary": (
+            "The notebook introduces arithmetic operators, floor division, modulo, logical "
+            "operators, compound assignment, identity checks with `is`, membership checks with "
+            "`in`, and how different data types behave with different operations."
+        ),
+        "key_topics": [
+            "Arithmetic operators",
+            "Floor division and modulo",
+            "Comparison and logical operators",
+            "Compound assignment",
+            "Identity and membership operators",
+            "Operator behavior across data types",
+        ],
         "concept": (
             "Operators are the symbols and keywords that make Python do work: arithmetic "
             "operators calculate, comparison operators return booleans, and logical "
-            "operators combine booleans into bigger decisions."
+            "operators combine booleans into bigger decisions. These small expressions are "
+            "the building blocks for larger program behavior, from calculating totals to "
+            "deciding whether a user has met a requirement."
         ),
         "mental_model": (
             "An operator is a small action word. `+` says add, `>` says compare, and "
-            "`and` says both conditions must be true."
+            "`and` says both conditions must be true. Read an expression like a tiny sentence: "
+            "`score >= 70 and completed_project` means the score condition and the project "
+            "condition both need to hold."
         ),
         "example_title": "A budget check",
         "example_code": """price = 45
@@ -157,13 +201,35 @@ print("Passed:", passed)""",
         "source_notebook": "lesson_3_control_structures.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1piL7cU3GZqXI_8CqFXuhKD8soraltDp_",
         "objective": "Control what runs, when it runs, and how many times it runs.",
+        "why_it_matters": (
+            "Without control structures, code only runs from top to bottom once. This lesson "
+            "is where programs start to feel intelligent: they can choose a path, repeat work, "
+            "stop early, and respond to changing values."
+        ),
+        "notebook_summary": (
+            "The notebook covers `if`, `elif`, and `else`, explains why indentation matters in "
+            "Python, then introduces `for` loops, `range()`, `break`, `while` loops, and the "
+            "logic behind repeated execution."
+        ),
+        "key_topics": [
+            "`if`, `elif`, and `else`",
+            "Indentation and code blocks",
+            "`for` loops",
+            "`range()`",
+            "`break`",
+            "`while` loops",
+        ],
         "concept": (
             "Control structures let your code make decisions and repeat work. `if`, `elif`, "
-            "and `else` choose a path. `for` and `while` loops repeat a block of code."
+            "and `else` choose a path. `for` and `while` loops repeat a block of code. "
+            "The important shift is that your program no longer does exactly the same thing "
+            "every time; it reacts to data, conditions, and repeated collections."
         ),
         "mental_model": (
             "A control structure is a fork or loop in the road. Indentation tells Python "
-            "which instructions belong to that road."
+            "which instructions belong to that road. If the condition is true, Python takes "
+            "one branch. If a loop still has values left, Python circles back and runs the "
+            "indented block again."
         ),
         "example_title": "Classify scores",
         "example_code": """scores = [92, 67, 81, 74]
@@ -227,13 +293,35 @@ print("Warm days:", warm_days)""",
         "source_notebook": "Lesson_4_data_structures.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1SlA4PPB3IuD-ISgRaUs7DZuETgpx0ARF",
         "objective": "Choose containers that match the kind of data you need to organize.",
+        "why_it_matters": (
+            "Real programs rarely work with one value at a time. Data structures let you keep "
+            "related values together, retrieve the right item, update collections, and model "
+            "records that are more useful than loose variables."
+        ),
+        "notebook_summary": (
+            "The notebook introduces Python's core containers: lists, tuples, sets, and "
+            "dictionaries. It spends extra time on list syntax, zero indexing, list methods, "
+            "tuple immutability, and the idea that methods are functions attached to objects."
+        ),
+        "key_topics": [
+            "Lists and indexing",
+            "List methods such as `append()` and `sort()`",
+            "Zero indexing",
+            "Tuples and immutability",
+            "Sets and uniqueness",
+            "Dictionaries and key-value lookup",
+        ],
         "concept": (
             "Data structures hold collections of values. Lists keep ordered items, dictionaries "
-            "map keys to values, tuples protect fixed records, and sets keep unique items."
+            "map keys to values, tuples protect fixed records, and sets keep unique items. "
+            "Choosing the right structure helps your code say what kind of collection you "
+            "mean, instead of forcing every problem into a pile of separate variables."
         ),
         "mental_model": (
             "A list is a row of numbered slots. A dictionary is a label maker. A set is a "
-            "deduplicator. A tuple is a record you do not plan to change."
+            "deduplicator. A tuple is a record you do not plan to change. When you ask for "
+            "`students[0]`, you are using position; when you ask for `scores['Ada']`, you "
+            "are using a meaningful key."
         ),
         "example_title": "Track a small course roster",
         "example_code": """students = ["Ada", "Grace", "Linus"]
@@ -302,14 +390,36 @@ print("Apples:", inventory["apples"])""",
         "source_notebook": "Lesson_5_Functions.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1VI5cOsXYDBrLPx2RTZdpdtixVtl-GdmI",
         "objective": "Write reusable functions with parameters, return values, and default arguments.",
+        "why_it_matters": (
+            "Functions are the first big step from writing individual lines of code to designing "
+            "programs. They help you avoid repetition, name a task clearly, test one piece at a "
+            "time, and reuse logic with different inputs."
+        ),
+        "notebook_summary": (
+            "The notebook builds from a `calculate_average` function into arguments, return "
+            "values, positional and keyword arguments, default arguments, built-in functions, "
+            "and a larger exercise that combines variables, lists, functions, and conditionals "
+            "to analyze weekly temperatures."
+        ),
+        "key_topics": [
+            "`def` and function bodies",
+            "Parameters and arguments",
+            "`return` values",
+            "Positional and keyword arguments",
+            "Default arguments",
+            "Built-in functions",
+        ],
         "concept": (
             "A function packages a task so you can run it again with different inputs. "
             "Parameters receive input values, the body does the work, and `return` sends "
-            "a result back to the caller."
+            "a result back to the caller. Good functions also make programs easier to read "
+            "because the function name explains the purpose of several lines of code at once."
         ),
         "mental_model": (
             "A function is a recipe card. The parameters are ingredients, the body is the "
-            "instructions, and the return value is the finished dish."
+            "instructions, and the return value is the finished dish. Calling the function "
+            "is like using the recipe with a specific set of ingredients; the same recipe can "
+            "produce a result for many different inputs."
         ),
         "example_title": "Calculate an average",
         "example_code": """def calculate_average(numbers):
@@ -371,13 +481,35 @@ print("Final price:", final_price)""",
         "source_notebook": "Lesson_6_modules_and_libraries.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1-kBACCtaplXo_q-T_E26R1gU9ADvld94",
         "objective": "Import standard-library modules and call functions from them.",
+        "why_it_matters": (
+            "Python becomes much more powerful when you stop writing everything from scratch. "
+            "Modules and libraries let you reuse reliable tools, organize your own code, and "
+            "understand how larger Python projects are assembled."
+        ),
+        "notebook_summary": (
+            "The notebook frames modules as code reuse, then walks through importing `math`, "
+            "dot notation, aliases with `as`, importing specific functions, namespace tradeoffs, "
+            "and file I/O concepts that prepare you to work outside a single notebook."
+        ),
+        "key_topics": [
+            "Code reuse",
+            "`import module`",
+            "Dot notation",
+            "Module aliases",
+            "`from module import name`",
+            "Namespaces and file I/O",
+        ],
         "concept": (
             "A module is a Python file full of reusable code. A library is a collection of "
-            "modules. `import` lets your program use code someone else already wrote."
+            "modules. `import` lets your program use code someone else already wrote. "
+            "Dot notation, such as `math.sqrt`, keeps it clear which module a function or "
+            "constant came from."
         ),
         "mental_model": (
             "Importing is like checking out a tool from a toolbox. Once the tool is on your "
-            "bench, you can call it by name."
+            "bench, you can call it by name. If you import the whole toolbox, you reach into "
+            "it with dot notation; if you import one specific tool, you can use that tool "
+            "directly."
         ),
         "example_title": "Use the math module",
         "example_code": """import math
@@ -440,13 +572,34 @@ print("Area:", round(circle_area(2), 2))""",
         "source_notebook": "Lesson_7_0bjects.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1XbrQHF9IDd3K3LDsBlv9C-rKX9USkrA8",
         "objective": "Create classes with attributes and methods.",
+        "why_it_matters": (
+            "Objects help you model things that have both data and behavior. Once programs get "
+            "bigger, classes give you a way to keep related details and actions together instead "
+            "of scattering them across unrelated variables and functions."
+        ),
+        "notebook_summary": (
+            "The notebook introduces classes through a `Car` example, then explains instances, "
+            "attributes, methods, `__init__`, `self`, class methods versus functions, core OOP "
+            "principles, inheritance, child classes, and `super()`."
+        ),
+        "key_topics": [
+            "Classes and instances",
+            "Attributes",
+            "Methods",
+            "`__init__`",
+            "`self`",
+            "Inheritance and `super()`",
+        ],
         "concept": (
             "A class is a blueprint for creating objects. Objects bundle data and behavior: "
-            "attributes store state, and methods define what the object can do."
+            "attributes store state, and methods define what the object can do. This is useful "
+            "when a thing in your program has details you need to remember and actions you "
+            "want it to perform."
         ),
         "mental_model": (
             "A class is the cookie cutter. Each object is one cookie made from that cutter, "
-            "with its own details."
+            "with its own details. The class defines what every object can have and do, while "
+            "each instance carries its own values, like one car's make, model, year, and speed."
         ),
         "example_title": "A simple Car class",
         "example_code": """class Car:
@@ -524,14 +677,35 @@ print(book.summary())""",
         "source_notebook": "Lesson_8_try.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1ol4qJewLT7VESzlIDLSWfMrpP8w03Kob",
         "objective": "Use exceptions to recover from predictable problems.",
+        "why_it_matters": (
+            "Errors are normal in real programs. Exception handling lets you turn a crash into "
+            "a helpful response, especially when input, files, calculations, or external data "
+            "do not behave the way you expected."
+        ),
+        "notebook_summary": (
+            "The notebook explains what exceptions are, shows intentional failing cells, then "
+            "introduces `try` and `except`, handling `ZeroDivisionError`, catching additional "
+            "error types, `finally`, user input with `input()`, and a brief move into external "
+            "libraries with pandas."
+        ),
+        "key_topics": [
+            "Exceptions",
+            "`try` and `except`",
+            "Specific error types",
+            "`finally`",
+            "User input",
+            "External libraries",
+        ],
         "concept": (
             "Exceptions are Python's way of saying something went wrong while the program "
             "was running. `try` lets you attempt risky code, and `except` lets you respond "
-            "without crashing the whole program."
+            "without crashing the whole program. The goal is not to hide errors; it is to "
+            "handle expected problems in a way that keeps the user and the program oriented."
         ),
         "mental_model": (
             "A `try` block is a safety mat. You still attempt the move, but you have a plan "
-            "for what happens if it fails."
+            "for what happens if it fails. The `except` block is that plan: it catches a "
+            "specific kind of fall and lets the program recover or explain the problem."
         ),
         "example_title": "Avoid division crashes",
         "example_code": """def safe_divide(a, b):
@@ -595,13 +769,35 @@ print(parse_age("not a number"))""",
         "source_notebook": "Lesson_9_pythonic_code.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1-CPoSm2nETBUOokDJH_k5l5RVNi8XSD4",
         "objective": "Rewrite common patterns using idiomatic Python.",
+        "why_it_matters": (
+            "Once you can write Python that works, the next step is writing Python other people "
+            "can read quickly. Pythonic code is not about being clever; it is about using the "
+            "language's common patterns to make intent easier to see."
+        ),
+        "notebook_summary": (
+            "The notebook revisits earlier skills and rewrites them in a more idiomatic style. "
+            "It covers list comprehensions, dictionary comprehensions, when not to compress a "
+            "loop, f-strings, formatting numbers, and nested data structures such as lists of "
+            "dictionaries and dictionaries of lists."
+        ),
+        "key_topics": [
+            "List comprehensions",
+            "Dictionary comprehensions",
+            "Readable loops versus compact code",
+            "f-strings",
+            "Number formatting",
+            "Nested data structures",
+        ],
         "concept": (
             "Pythonic code is code that uses Python's strengths: direct loops, clear names, "
-            "list comprehensions, dictionary comprehensions, unpacking, and built-in tools."
+            "list comprehensions, dictionary comprehensions, unpacking, and built-in tools. "
+            "It is not about making code shorter at all costs; it is about making the intent "
+            "more obvious to someone who reads Python regularly."
         ),
         "mental_model": (
             "Pythonic code usually says the idea directly. It removes ceremony so the useful "
-            "part is easier to see."
+            "part is easier to see. A list comprehension, for example, reads like `make this "
+            "new value for each old value`, which matches the shape of the idea."
         ),
         "example_title": "Replace a loop with a comprehension",
         "example_code": """numbers = [1, 2, 3, 4, 5]
@@ -660,14 +856,37 @@ print(clean_cities)""",
         "source_notebook": "Lesson_10_json_apis_and_environments.ipynb",
         "colab_url": "https://colab.research.google.com/drive/1QFKQo5jGs3PPplGjamxxgXfGi5MhsHLY",
         "objective": "Parse JSON-like data, understand API responses, and know why environment variables matter.",
+        "why_it_matters": (
+            "This is where Python starts connecting to the outside world. JSON, APIs, virtual "
+            "environments, package installs, and environment variables are the tools that move "
+            "you from notebook exercises toward real projects."
+        ),
+        "notebook_summary": (
+            "The notebook explains JSON as a common data exchange format, converts JSON text "
+            "with `json.loads()` and `json.dumps()`, reads nested JSON, introduces API requests "
+            "and status codes, discusses API keys and respectful usage, then covers virtual "
+            "environments, `pip`, `requirements.txt`, and environment variables."
+        ),
+        "key_topics": [
+            "JSON objects and arrays",
+            "`json.loads()` and `json.dumps()`",
+            "Nested JSON",
+            "API requests and status codes",
+            "Virtual environments and `pip`",
+            "Environment variables",
+        ],
         "concept": (
             "JSON is a text format that programs use to exchange structured data. APIs often "
             "send JSON responses. Environment variables keep configuration, secrets, and "
-            "deployment settings outside your source code."
+            "deployment settings outside your source code. Together, these ideas let your "
+            "Python code work with services, files, keys, and project settings beyond the "
+            "notebook."
         ),
         "mental_model": (
             "JSON is a shipping box for data. APIs deliver the box. Environment variables "
-            "hold private labels and settings you do not want hard-coded."
+            "hold private labels and settings you do not want hard-coded. Your job is to open "
+            "the box, understand its nested structure, and pull out the fields your program "
+            "actually needs."
         ),
         "example_title": "Read nested JSON data",
         "example_code": """import json
