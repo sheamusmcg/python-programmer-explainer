@@ -9,6 +9,7 @@ import builtins
 import math
 import signal
 import statistics
+import threading
 import json
 import random
 
@@ -102,15 +103,20 @@ def _safe_builtins() -> dict:
 @contextmanager
 def _time_limit(seconds: int):
     """Apply a simple Unix timeout for code that may loop forever."""
-    if not hasattr(signal, "SIGALRM"):
+    if not hasattr(signal, "SIGALRM") or threading.current_thread() is not threading.main_thread():
         yield
         return
 
     def _handler(signum, frame):
         raise ExecutionTimeout("Code ran for too long. Check for an infinite loop.")
 
-    previous = signal.signal(signal.SIGALRM, _handler)
-    signal.alarm(seconds)
+    try:
+        previous = signal.signal(signal.SIGALRM, _handler)
+        signal.alarm(seconds)
+    except ValueError:
+        yield
+        return
+
     try:
         yield
     finally:
